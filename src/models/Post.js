@@ -4,6 +4,11 @@ const PostSchema = new mongoose.Schema(
   {
     title: { type: String, minlength: 1, required: true },
     description: { type: String, required: true, minlength: 5 },
+    category: {
+      name: { type: String, required: true },
+      category: { type: String, required: true },
+    },
+    timestamp: { type: Number, default: () => Math.floor(Date.now() / 1000) },
   },
   { versionKey: false }
 );
