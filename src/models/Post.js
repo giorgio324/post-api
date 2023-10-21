@@ -6,7 +6,7 @@ const PostSchema = new mongoose.Schema(
     description: { type: String, required: true, minlength: 5 },
     category: {
       name: { type: String, required: true },
-      category: { type: String, required: true },
+      status: { type: Boolean, default: false },
     },
     timestamp: { type: Number, default: () => Math.floor(Date.now() / 1000) },
   },
